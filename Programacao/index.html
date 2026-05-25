@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro dos Vestibulares</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <nav class="tab-navigation">
+            <button class="tab-button active" onclick="openTab(event, 'enem')">ENEM</button>
+            <button class="tab-button" onclick="openTab(event, 'ufpr')">UFPR</button>
+            <button class="tab-button" onclick="openTab(event, 'mackenzie')">Mackenzie</button>
+            <button class="tab-button" onclick="openTab(event, 'puc')">PUC</button>
+        </nav>
+
+        <section class="tab-container">
+            
+            <div id="enem" class="tab-content active">
+                <h2>Explosão de Conteúdo: ENEM 2026</h2>
+                <div class="countdown" data-date="2026-11-01T13:00:00">
+                    <div class="time-box"><span class="days">00</span><p>Dias</p></div>
+                    <div class="time-box"><span class="hours">00</span><p>Horas</p></div>
+                    <div class="time-box"><span class="minutes">00</span><p>Minutos</p></div>
+                    <div class="time-box"><span class="seconds">00</span><p>Segundos</p></div>
+                </div>
+            </div>
+
+            <div id="ufpr" class="tab-content">
+                <h2>Rumo à Federal: UFPR 2027</h2>
+                <div class="countdown" data-date="2026-10-18T14:00:00">
+                    <div class="time-box"><span class="days">00</span><p>Dias</p></div>
+                    <div class="time-box"><span class="hours">00</span><p>Horas</p></div>
+                    <div class="time-box"><span class="minutes">00</span><p>Minutos</p></div>
+                    <div class="time-box"><span class="seconds">00</span><p>Segundos</p></div>
+                </div>
+            </div>
+
+            <div id="mackenzie" class="tab-content">
+                <h2>Tradição e Futuro: Mackenzie 2027</h2>
+                <div class="countdown" data-date="2026-12-05T08:30:00">
+                    <div class="time-box"><span class="days">00</span><p>Dias</p></div>
+                    <div class="time-box"><span class="hours">00</span><p>Horas</p></div>
+                    <div class="time-box"><span class="minutes">00</span><p>Minutos</p></div>
+                    <div class="time-box"><span class="seconds">00</span><p>Segundos</p></div>
+                </div>
+            </div>
+
+            <div id="puc" class="tab-content">
+                <h2>Excelência Acadêmica: PUC 2027</h2>
+                <div class="countdown" data-date="2026-11-22T13:00:00">
+                    <div class="time-box"><span class="days">00</span><p>Dias</p></div>
+                    <div class="time-box"><span class="hours">00</span><p>Horas</p></div>
+                    <div class="time-box"><span class="minutes">00</span><p>Minutos</p></div>
+                    <div class="time-box"><span class="seconds">00</span><p>Segundos</p></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

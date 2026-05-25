@@ -1,0 +1,135 @@
+/* Reset básico e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo Roxo Escuro */
+body {
+    background-color: #120524;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container Centralizado ocupando 80% da tela */
+.container {
+    width: 80%;
+    max-width: 1100px;
+    background-color: #1d0b3a;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border: 1px solid #34195c;
+}
+
+/* Estilização das Abas de Navegação */
+.tab-navigation {
+    display: flex;
+    background-color: #0f041e;
+    border-bottom: 2px solid #34195c;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 20px;
+    background: none;
+    border: none;
+    color: #a291b8;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    color: #ffffff;
+    background-color: #250f46;
+}
+
+.tab-button.active {
+    color: #bb86fc;
+    background-color: #1d0b3a;
+    border-bottom: 4px solid #bb86fc;
+}
+
+/* Área de Conteúdo das Abas */
+.tab-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #e2d7f2;
+}
+
+/* Layout dos Cronômetros */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: #29124e;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 110px;
+    border: 1px solid #442375;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.time-box span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #03dac6;
+}
+
+.time-box p {
+    font-size: 0.9rem;
+    color: #b3a4c7;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Animação suave de transição de abas */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade simples para telas menores */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .tab-navigation {
+        flex-direction: column;
+    }
+    .time-box {
+        min-width: 80px;
+        padding: 15px;
+    }
+    .time-box span {
+        font-size: 1.8rem;
+    }
+}
